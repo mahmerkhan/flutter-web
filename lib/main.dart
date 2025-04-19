@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter_web/project.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -308,11 +309,36 @@ class MainPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 60),
-                      HoverText(
-                        text: "View Full Projects",
-                        onTap: () {
-                          Navigator.pushNamed(context, '/projects');
-                        },
+                      Row(
+                        children: [
+                          HoverText(
+                            text: "View Full Projects",
+                            onTap: () {
+                              Navigator.pushNamed(context, '/projects');
+                            },
+                          ),
+                          SizedBox(
+                            height: 50,
+                            width: 50,
+                            child: SvgPicture.asset("assets/images/a1.svg"),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          SizedBox(
+                            height: 50,
+                            width: 50,
+                            child: Image.asset("assets/images/a2.png"),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          // SizedBox(
+                          //   height: 50,
+                          //   width: 50,
+                          //   child: SvgPicture.asset("assets/images/a3.jpg"),
+                          // ),
+                        ],
                       ),
                     ],
                   ),
@@ -355,7 +381,6 @@ class LeftSidebar extends StatelessWidget {
             // GestureDetector(
             //   onTap: (){},
             //   child: SvgPicture.asset("images/github.svg")),
-            
           ],
         )
       ],

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-class ProjectsPage extends StatelessWidget {
-  const ProjectsPage({super.key});
+import 'package:flutter_web/utilities/extensions.dart';
+class ProjectListingScreen extends StatelessWidget {
+  const ProjectListingScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF0F172A),
       body: SafeArea(
         child: SingleChildScrollView(
-          // :point_left: Enable vertical scrolling
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 48.0),
             child: Column(
@@ -26,7 +26,7 @@ class ProjectsPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 16),
+                16.verticalSpace,
                 const Text(
                   "All Projects",
                   style: TextStyle(
@@ -36,7 +36,7 @@ class ProjectsPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 32),
+                32.verticalSpace,
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 100),
                   child: LayoutBuilder(
@@ -80,104 +80,6 @@ class ProjectsPage extends StatelessWidget {
   }
 }
 final List<DataRow> _projectRows = [
-  // projectRow(
-  //   year: "2023",
-  //   project: "Emerson Collective",
-  //   company: "Upstatement",
-  //   tools: ["Next.js", "TypeScript", "SCSS", "Contentful"],
-  //   link: "emersoncollective.com",
-  // ),
-  // projectRow(
-  //   year: "2023",
-  //   project: "Harvard Business School Next.js Site",
-  //   company: "Upstatement",
-  //   tools: ["React", "TypeScript", "Next.js", "Contentful"],
-  //   link: "hbs.edu",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "Upstatement",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Threadable",
-  //   company: "Upstatement",
-  //   tools: ["React Native", "Ruby on Rails", "Firebase"],
-  //   link: "apps.apple.com",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Pratt",
-  //   company: "Upstatement",
-  //   tools: ["WordPress", "Timber", "WordPress Multisite", "Gutenberg", "JavaScript"],
-  //   link: "pratt.edu",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "Upstatement",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "Upstatement",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "Upstatement",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "Upstatement",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "Upstatement",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "Upstatement",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "Upstatement",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "Upstatement",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
-  // projectRow(
-  //   year: "2022",
-  //   project: "Harvard Business School Design System",
-  //   company: "",
-  //   tools: ["Storybook", "React", "TypeScript"],
-  //   link: "",
-  // ),
   projectRow(
     year: "2022",
     project: "LinkedUnion",

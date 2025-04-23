@@ -51,7 +51,7 @@ Widget desktopLayout(BuildContext context) {
             children: [
               RichText(
                 text: TextSpan(
-                  style: GoogleFonts.inter(fontSize: 16, color: Colors.grey,letterSpacing: 2),
+                  style: GoogleFonts.poppins(fontSize: 13, color: Colors.grey, letterSpacing: 2),
                   children: [
                     const TextSpan(
                       text:
@@ -271,52 +271,43 @@ Widget desktopLayout(BuildContext context) {
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // LEFT SIDE — IMAGE
                     Expanded(
-                      flex: 1,
+                      flex: 2,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          'assets/images/badgerr.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(width: 20),
+
+                    // RIGHT SIDE — TEXT
+                    Expanded(
+                      flex: 3,
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              "2022—-2023",
-                              style: TextStyle(fontSize: 16), // Optional
-                            ),
+                          Text(
+                            "Badgerr Application",
+                            style: GoogleFonts.inter(fontSize: 14, color: Colors.cyan),
+                          ),
+                          const SizedBox(height: 10),
+                          Text(
+                            "It is a gamified application in which user can create and accept challenges."
+                            "Admin can assign badges, winners with real time push notifications and chat sockets.",
+                            style: GoogleFonts.inter(fontSize: 13, color: Colors.white),
                           ),
                         ],
                       ),
                     ),
-                    Expanded(
-                        flex: 2,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Junior Flutter Engineeer, Avialdo Solutions",
-                              style: GoogleFonts.inter(fontSize: 14, color: Colors.cyan),
-                            ),
-                            10.verticalSpace,
-                            Text("pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development,"),
-                            10.verticalSpace,
-                            Wrap(
-                              spacing: 10,
-                              runSpacing: 6,
-                              children: tools
-                                  .map((tool) => Chip(
-                                        label: Text(tool),
-                                        backgroundColor: Colors.teal[700],
-                                        labelStyle: const TextStyle(color: Colors.white, fontSize: 12),
-                                      ))
-                                  .toList(),
-                            ),
-                          ],
-                        ))
                   ],
                 ),
               ),
@@ -329,18 +320,6 @@ Widget desktopLayout(BuildContext context) {
                       Navigator.pushNamed(context, '/projects');
                     },
                   ),
-                  SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: SvgPicture.asset("assets/images/a1.svg"),
-                  ),
-                  10.horizontalSpace,
-                  SizedBox(
-                    height: 50,
-                    width: 50,
-                    child: Image.asset("assets/images/a2.png"),
-                  ),
-                  10.horizontalSpace,
                 ],
               ),
             ],
@@ -440,8 +419,59 @@ Widget mobileLayout(BuildContext context) {
           ),
           60.verticalSpace,
           Text("EXPERIENCE", style: GoogleFonts.inter(letterSpacing: 2)),
+          20.verticalSpace,
           SizedBox(height: 8),
           Text("PROJECTS", style: GoogleFonts.inter(letterSpacing: 2)),
+          20.verticalSpace,
+          Container(
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 11, 22, 45),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // LEFT SIDE — IMAGE
+                Expanded(
+                  flex: 2,
+                  child: SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.2,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'assets/images/badgerr.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(width: 20),
+
+                // RIGHT SIDE — TEXT
+                Expanded(
+                  flex: 3,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Badgerr Application",
+                        style: GoogleFonts.inter(fontSize: 14, color: Colors.cyan),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        "It is a gamified application in which user can create and accept challenges."
+                        "Admin can assign badges, winners with real time push notifications and chat sockets.",
+                        style: GoogleFonts.inter(fontSize: 13, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     ),

@@ -4,6 +4,7 @@ import 'package:flutter_web/utilities/breakpoints.dart';
 import 'package:flutter_web/utilities/extensions.dart';
 import 'package:flutter_web/utilities/hover_text.dart';
 import 'package:flutter_web/utilities/left_sidebar.dart';
+import 'package:flutter_web/utilities/project_card.dart';
 import 'package:flutter_web/utilities/section_tile.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -265,52 +266,20 @@ Widget desktopLayout(BuildContext context) {
               SectionTitle("Projects"),
               // SectionText("Spotify Profile, WebGL demos, React apps, Node.js APIs..."),
               30.verticalSpace,
-              Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 11, 22, 45),
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
-                ),
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // LEFT SIDE — IMAGE
-                    Expanded(
-                      flex: 2,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'assets/images/badgerr.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-
-                    const SizedBox(width: 20),
-
-                    // RIGHT SIDE — TEXT
-                    Expanded(
-                      flex: 3,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Badgerr Application",
-                            style: GoogleFonts.inter(fontSize: 14, color: Colors.cyan),
-                          ),
-                          const SizedBox(height: 10),
-                          Text(
-                            "It is a gamified application in which user can create and accept challenges."
-                            "Admin can assign badges, winners with real time push notifications and chat sockets.",
-                            style: GoogleFonts.inter(fontSize: 13, color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              projectCardWeb("assets/images/badgerr.png", "Badgerr", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+              40.verticalSpace,
+              projectCardWeb("assets/images/jtc.png", "title", "desc", context),
+              40.verticalSpace,
+              projectCardWeb("assets/images/pinch.png", "title", "desc", context),
+              40.verticalSpace,
+              projectCardWeb("assets/images/ucr.png", "title", "desc", context),
+              40.verticalSpace,
+              projectCardWeb("assets/images/user.png", "title", "desc", context),
+              40.verticalSpace,
+              projectCardWeb("assets/images/agent.png", "title", "desc", context),
+              40.verticalSpace,
+              projectCardWeb("assets/images/lookna.png", "title", "desc", context),
+              
               60.verticalSpace,
               Row(
                 children: [
@@ -347,7 +316,7 @@ Widget mobileLayout(BuildContext context) {
           ),
           SizedBox(height: 8),
           Text(
-            "Mobile Application Engineer",
+            "Mobile Applications Engineer",
             style: GoogleFonts.inter(fontSize: 16, color: Colors.grey),
           ),
           100.verticalSpace,
@@ -423,55 +392,19 @@ Widget mobileLayout(BuildContext context) {
           SizedBox(height: 8),
           Text("PROJECTS", style: GoogleFonts.inter(letterSpacing: 2)),
           20.verticalSpace,
-          Container(
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 11, 22, 45),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // LEFT SIDE — IMAGE
-                Expanded(
-                  flex: 2,
-                  child: SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.2,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        'assets/images/badgerr.png',
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ),
-
-                const SizedBox(width: 20),
-
-                // RIGHT SIDE — TEXT
-                Expanded(
-                  flex: 3,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Badgerr Application",
-                        style: GoogleFonts.inter(fontSize: 14, color: Colors.cyan),
-                      ),
-                      const SizedBox(height: 10),
-                      Text(
-                        "It is a gamified application in which user can create and accept challenges."
-                        "Admin can assign badges, winners with real time push notifications and chat sockets.",
-                        style: GoogleFonts.inter(fontSize: 13, color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+          projectCardMobile("assets/images/badgerr.png", "Badger", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+          20.verticalSpace,
+          projectCardMobile("assets/images/jtc.png", "title", "desc", context),
+          20.verticalSpace,
+          projectCardMobile("assets/images/pinch.png", "title", "desc", context),
+          20.verticalSpace,
+          projectCardMobile("assets/images/ucr.png", "title", "desc", context),
+          20.verticalSpace,
+          projectCardMobile("assets/images/user.png", "title", "desc", context),
+          20.verticalSpace,
+          projectCardMobile("assets/images/agent.png", "title", "desc", context),
+          20.verticalSpace,
+          projectCardMobile("assets/images/lookna.png", "title", "desc", context),
         ],
       ),
     ),

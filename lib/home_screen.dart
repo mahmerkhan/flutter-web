@@ -7,6 +7,7 @@ import 'package:flutter_web/utilities/left_sidebar.dart';
 import 'package:flutter_web/utilities/project_card.dart';
 import 'package:flutter_web/utilities/section_tile.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
@@ -56,7 +57,7 @@ Widget desktopLayout(BuildContext context) {
                   children: [
                     const TextSpan(
                       text:
-                          "I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.\n\nCurrently, I'm a Senior Mobile App Developer at ",
+                          "I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.\n\nCurrently, I'm a Flutter Engineer at ",
                     ),
                     TextSpan(
                       text: "Reactree",
@@ -112,9 +113,28 @@ Widget desktopLayout(BuildContext context) {
                         children: [
                           Align(
                             alignment: Alignment.topLeft,
-                            child: Text(
-                              "2024--PRESENT",
-                              style: TextStyle(fontSize: 16), // Optional
+                            child: Row(
+                              children: [
+                                Text(
+                                  "2024",
+                                  style: TextStyle(fontSize: 16), // Optional
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Container(
+                                  height: 1.0,
+                                  width: 20,
+                                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(2.0), color: Colors.grey),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  "Present",
+                                  style: TextStyle(fontSize: 16), // Optional
+                                ),
+                              ],
                             ),
                           ),
                         ],
@@ -168,9 +188,28 @@ Widget desktopLayout(BuildContext context) {
                         children: [
                           Align(
                             alignment: Alignment.topLeft,
-                            child: Text(
-                              "2023-—2023",
-                              style: TextStyle(fontSize: 16), // Optional
+                            child: Row(
+                              children: [
+                                Text(
+                                  "2023",
+                                  style: TextStyle(fontSize: 16), // Optional
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Container(
+                                  height: 1.0,
+                                  width: 20,
+                                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(2.0), color: Colors.grey),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  "2024",
+                                  style: TextStyle(fontSize: 16), // Optional
+                                ),
+                              ],
                             ),
                           ),
                         ],
@@ -224,9 +263,28 @@ Widget desktopLayout(BuildContext context) {
                         children: [
                           Align(
                             alignment: Alignment.topLeft,
-                            child: Text(
-                              "2022—-2023",
-                              style: TextStyle(fontSize: 16), // Optional
+                            child: Row(
+                              children: [
+                                Text(
+                                  "2022",
+                                  style: TextStyle(fontSize: 16), // Optional
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Container(
+                                  height: 1.0,
+                                  width: 20,
+                                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(2.0), color: Colors.grey),
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  "2023",
+                                  style: TextStyle(fontSize: 16), // Optional
+                                ),
+                              ],
                             ),
                           ),
                         ],
@@ -266,20 +324,24 @@ Widget desktopLayout(BuildContext context) {
               SectionTitle("Projects"),
               // SectionText("Spotify Profile, WebGL demos, React apps, Node.js APIs..."),
               30.verticalSpace,
-              projectCardWeb("assets/images/badgerr.png", "Badgerr", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+              projectCardWeb(
+                  "assets/images/badgerr.png",
+                  "Badgerr",
+                  "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
+                  context),
               40.verticalSpace,
-              projectCardWeb("assets/images/jtc.png", "title", "desc", context),
+              projectCardWeb("assets/images/jtc.png", "JTC Fundraiser", "JTC Fundraiser", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/pinch.png", "title", "desc", context),
+              projectCardWeb("assets/images/pinch.png", "Pinch.om", "Pinch", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/ucr.png", "title", "desc", context),
+              projectCardWeb("assets/images/ucr.png", "Ucrypted", "Ucrypted", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/user.png", "title", "desc", context),
+              projectCardWeb("assets/images/user.png", "Mozaic User App", "Mozaic User App", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/agent.png", "title", "desc", context),
+              projectCardWeb("assets/images/agent.png", "Mozaic Agent App", "Mozaic Agent App", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/lookna.png", "title", "desc", context),
-              
+              projectCardWeb("assets/images/lookna.png", "Lookna", "Lookna", context),
+
               60.verticalSpace,
               Row(
                 children: [
@@ -323,35 +385,50 @@ Widget mobileLayout(BuildContext context) {
           Row(
             children: [
               GestureDetector(
-                  onTap: () {},
-                  child: SvgPicture.asset(
-                    height: 30,
-                    width: 30,
-                    "assets/images/git.svg",
-                    fit: BoxFit.cover,
-                  )),
+                onTap: () async {
+                  const url = 'https://github.com/mahmerkhan';
+                  if (await canLaunchUrl(Uri.parse(url))) {
+                    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
+                child: SvgPicture.asset(
+                  "assets/images/git.svg",
+                  height: 30,
+                  width: 30,
+                ),
+              ),
               10.horizontalSpace,
               GestureDetector(
-                  onTap: () {},
-                  child: SvgPicture.asset(
-                    height: 30,
-                    width: 30,
-                    "assets/images/li.svg",
-                    fit: BoxFit.cover,
-                  )),
+                onTap: () async {
+                  const url = 'https://www.linkedin.com/in/iamahmerkhan/';
+                  if (await canLaunchUrl(Uri.parse(url))) {
+                    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
+                child: SvgPicture.asset(
+                  "assets/images/li.svg",
+                  height: 30,
+                  width: 30,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ],
           ),
           50.verticalSpace,
           SizedBox(height: 24),
-          Text("ABOUT", style: GoogleFonts.inter(letterSpacing: 2)),
+          Text("ABOUT", style: GoogleFonts.inter(letterSpacing: 2, fontSize: 15)),
           SizedBox(height: 8),
           RichText(
             text: TextSpan(
-              style: GoogleFonts.inter(fontSize: 16, color: Colors.grey, letterSpacing: 2),
+              style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2),
               children: [
                 const TextSpan(
                   text:
-                      "I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.\n\nCurrently, I'm a Senior Mobile App Developer at ",
+                      "I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.\n\nCurrently, I'm a Flutter Engineer at ",
                 ),
                 TextSpan(
                   text: "Reactree",
@@ -387,24 +464,28 @@ Widget mobileLayout(BuildContext context) {
             ),
           ),
           60.verticalSpace,
-          Text("EXPERIENCE", style: GoogleFonts.inter(letterSpacing: 2)),
+          Text("EXPERIENCE", style: GoogleFonts.inter(letterSpacing: 2, fontSize: 15)),
           20.verticalSpace,
           SizedBox(height: 8),
-          Text("PROJECTS", style: GoogleFonts.inter(letterSpacing: 2)),
+          Text("PROJECTS", style: GoogleFonts.inter(letterSpacing: 2, fontSize: 15)),
           20.verticalSpace,
-          projectCardMobile("assets/images/badgerr.png", "Badger", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+          projectCardMobile(
+              "assets/images/badgerr.png",
+              "Badger",
+              "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
+              context),
           20.verticalSpace,
-          projectCardMobile("assets/images/jtc.png", "title", "desc", context),
+          projectCardMobile("assets/images/jtc.png", "JTC Fundraiser", "JTC Fundraiser", context),
           20.verticalSpace,
-          projectCardMobile("assets/images/pinch.png", "title", "desc", context),
+          projectCardMobile("assets/images/pinch.png", "Pinch.om", "Pinch", context),
           20.verticalSpace,
-          projectCardMobile("assets/images/ucr.png", "title", "desc", context),
+          projectCardMobile("assets/images/ucr.png", "Ucrypted", "Ucrypted", context),
           20.verticalSpace,
-          projectCardMobile("assets/images/user.png", "title", "desc", context),
+          projectCardMobile("assets/images/user.png", "Mozaic User App", "Mozaic User App", context),
           20.verticalSpace,
-          projectCardMobile("assets/images/agent.png", "title", "desc", context),
+          projectCardMobile("assets/images/agent.png", "Mozaic Agent App", "Mozaic Agent App", context),
           20.verticalSpace,
-          projectCardMobile("assets/images/lookna.png", "title", "desc", context),
+          projectCardMobile("assets/images/lookna.png", "Lookna", "Lookna", context),
         ],
       ),
     ),

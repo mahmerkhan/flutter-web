@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_web/utilities/extensions.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LeftSidebar extends StatelessWidget {
   const LeftSidebar({super.key});
@@ -30,7 +31,14 @@ class LeftSidebar extends StatelessWidget {
         Row(
           children: [
             GestureDetector(
-                onTap: () {},
+                onTap: () async {
+                  const url = 'https://github.com/mahmerkhan';
+                  if (await canLaunchUrl(Uri.parse(url))) {
+                    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
                 child: SvgPicture.asset(
                   height: 30,
                   width: 30,
@@ -39,7 +47,14 @@ class LeftSidebar extends StatelessWidget {
                 )),
             10.horizontalSpace,
             GestureDetector(
-                onTap: () {},
+                onTap: () async {
+                  const url = 'https://www.linkedin.com/in/iamahmerkhan/';
+                  if (await canLaunchUrl(Uri.parse(url))) {
+                    await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
                 child: SvgPicture.asset(
                   height: 30,
                   width: 30,

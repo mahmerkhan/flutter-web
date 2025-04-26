@@ -180,12 +180,12 @@ Widget projectCardMobile(String image, String title, String desc, BuildContext c
             children: [
               Text(
                 title,
-                style: GoogleFonts.inter(fontSize: 14, color: Colors.cyan),
+                style: GoogleFonts.inter(fontSize: 12, color: Colors.cyan),
               ),
               const SizedBox(height: 10),
               Text(
                 desc,
-                style: GoogleFonts.inter(fontSize: 13, color: Colors.white),
+                style: GoogleFonts.inter(fontSize: 11, color: Colors.white),
               ),
             ],
           ),

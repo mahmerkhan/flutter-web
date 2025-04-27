@@ -53,11 +53,15 @@ Widget desktopLayout(BuildContext context) {
             children: [
               RichText(
                 text: TextSpan(
-                  style: GoogleFonts.poppins(fontSize: 13, color: Colors.grey, letterSpacing: 2),
+                  style: GoogleFonts.poppins(
+                    fontSize: 13,
+                    color: Colors.grey,
+                    letterSpacing: 2,
+                  ),
                   children: [
                     const TextSpan(
                       text:
-                          "I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.\n\nCurrently, I'm a Flutter Engineer at ",
+                          "Building mobile apps today demands more than just smooth interfaces — it requires accessibility, performance, and seamless user experiences at every interaction. Focusing on the intersection of thoughtful design and robust engineering, I craft pixel-perfect, accessible UI components that are not only visually appealing but meticulously optimized for usability and speed.\n\nAs a Senior Mobile App Developer at ",
                     ),
                     TextSpan(
                       text: "Reactree",
@@ -65,33 +69,26 @@ Widget desktopLayout(BuildContext context) {
                     ),
                     const TextSpan(
                       text:
-                          ", specializing in accessibility. I contribute to the creation and maintenance of UI components that power, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.\n\nIn the past, I've had the opportunity to develop software across a variety of settings from ",
+                          ", I specialize in accessibility, contributing to the creation and maintenance of UI frameworks that align with modern web accessibility standards. I have hands-on experience with complex state management patterns (like GetX, Provider, Bloc), offline data storage strategies (using SQLite, Hive, and local caching mechanisms), and advanced mobile debugging techniques to diagnose, profile, and optimize app performance even under challenging conditions.\n\nOver the past ",
                     ),
                     TextSpan(
-                      text: "advertising agencies",
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                    const TextSpan(text: " and "),
-                    TextSpan(
-                      text: "large corporations",
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                    const TextSpan(text: " to "),
-                    TextSpan(
-                      text: "start-ups",
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                    const TextSpan(text: " and "),
-                    TextSpan(
-                      text: "small digital product studios",
+                      text: "4+ years",
                       style: const TextStyle(color: Colors.white),
                     ),
                     const TextSpan(
-                      text: ". I’m usually climbing, reading, hanging out with friends.",
+                      text: ", I’ve worked across multiple firms and software houses, delivering production-ready mobile applications and ",
+                    ),
+                    TextSpan(
+                      text: "MVPs",
+                      style: const TextStyle(color: Colors.white),
+                    ),
+                    const TextSpan(
+                      text: " for diverse industries. This experience has shaped my ability to build scalable, maintainable products that balance speed, quality, and user needs.",
                     ),
                   ],
                 ),
               ),
+
               60.verticalSpace,
               SectionTitle("Experience"),
               20.verticalSpace,
@@ -362,7 +359,7 @@ Widget desktopLayout(BuildContext context) {
 }
 
 Widget mobileLayout(BuildContext context) {
-  final tools = ["flutter", "android", "ios"];
+  // final tools = ["flutter", "android", "ios"];
 
   return SingleChildScrollView(
     child: Padding(
@@ -424,11 +421,15 @@ Widget mobileLayout(BuildContext context) {
           SizedBox(height: 8),
           RichText(
             text: TextSpan(
-              style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2),
+              style: GoogleFonts.inter(
+                fontSize: 11,
+                color: Colors.grey,
+                letterSpacing: 2,
+              ),
               children: [
                 const TextSpan(
                   text:
-                      "I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.\n\nCurrently, I'm a Flutter Engineer at ",
+                      "Building mobile apps today demands more than just smooth interfaces — it requires accessibility, performance, and seamless user experiences at every interaction.\n\nFocusing on the intersection of thoughtful design and robust engineering, I craft pixel-perfect, accessible UI components that are not only visually appealing but meticulously optimized for usability and speed.\n\nAs a Senior Mobile App Developer at ",
                 ),
                 TextSpan(
                   text: "Reactree",
@@ -436,29 +437,21 @@ Widget mobileLayout(BuildContext context) {
                 ),
                 const TextSpan(
                   text:
-                      ", specializing in accessibility. I contribute to the creation and maintenance of UI components that power, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.\n\nIn the past, I've had the opportunity to develop software across a variety of settings from ",
+                      ", I specialize in accessibility, contributing to the creation and maintenance of UI frameworks that align with modern web accessibility standards. I have hands-on experience with complex state management patterns (like GetX, Provider, Bloc), offline data storage strategies (using SQLite, Hive, and local caching mechanisms), and advanced mobile debugging techniques to diagnose, profile, and optimize app performance even under challenging conditions.\n\nOver the past ",
                 ),
                 TextSpan(
-                  text: "advertising agencies",
-                  style: const TextStyle(color: Colors.white),
-                ),
-                const TextSpan(text: " and "),
-                TextSpan(
-                  text: "large corporations",
-                  style: const TextStyle(color: Colors.white),
-                ),
-                const TextSpan(text: " to "),
-                TextSpan(
-                  text: "start-ups",
-                  style: const TextStyle(color: Colors.white),
-                ),
-                const TextSpan(text: " and "),
-                TextSpan(
-                  text: "small digital product studios",
+                  text: "4+ years",
                   style: const TextStyle(color: Colors.white),
                 ),
                 const TextSpan(
-                  text: ". I’m usually climbing, reading, hanging out with friends.",
+                  text: ", I’ve worked across multiple firms and software houses, delivering production-ready mobile applications and ",
+                ),
+                TextSpan(
+                  text: "MVPs",
+                  style: const TextStyle(color: Colors.white),
+                ),
+                const TextSpan(
+                  text: " for diverse industries. This experience has shaped my ability to build scalable, maintainable products that balance speed, quality, and user needs.",
                 ),
               ],
             ),
@@ -466,7 +459,195 @@ Widget mobileLayout(BuildContext context) {
           60.verticalSpace,
           Text("EXPERIENCE", style: GoogleFonts.inter(letterSpacing: 2, fontSize: 15)),
           20.verticalSpace,
-          SizedBox(height: 8),
+          Container(
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 11, 22, 45),
+              // borderRadius: BorderRadius.circular(12),
+              // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
+            ),
+            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(
+                        children: [
+                          Text(
+                            "2024",
+                            style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2), // Optional
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Container(
+                            height: 1.0,
+                            width: 18,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(2.0), color: Colors.grey),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            "Present",
+                            style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2), // Optional
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    10.verticalSpace,
+                    Text(
+                      "Senior Mobile App Developer, Reactree Pvt. Ltd",
+                      style: GoogleFonts.inter(fontSize: 12, color: Colors.cyan),
+                    ),
+                    10.verticalSpace,
+                    Text(
+                      "pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development,",
+                      style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2),
+                    ),
+                    10.verticalSpace,
+                  ],
+                )
+              ],
+            ),
+          ),
+          20.verticalSpace,
+          Container(
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 11, 22, 45),
+              // borderRadius: BorderRadius.circular(12),
+              // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
+            ),
+            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(
+                        children: [
+                          Text(
+                            "2024",
+                            style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2), // Optional
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Container(
+                            height: 1.0,
+                            width: 18,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(2.0), color: Colors.grey),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            "Present",
+                            style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2), // Optional
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    10.verticalSpace,
+                    Text(
+                      "Senior Mobile App Developer, Reactree Pvt. Ltd",
+                      style: GoogleFonts.inter(fontSize: 12, color: Colors.cyan),
+                    ),
+                    10.verticalSpace,
+                    Text(
+                      "pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development,",
+                      style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2),
+                    ),
+                    10.verticalSpace,
+                  ],
+                )
+              ],
+            ),
+          ),
+          20.verticalSpace,
+          Container(
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 11, 22, 45),
+              // borderRadius: BorderRadius.circular(12),
+              // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
+            ),
+            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(
+                        children: [
+                          Text(
+                            "2024",
+                            style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2), // Optional
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Container(
+                            height: 1.0,
+                            width: 18,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(2.0), color: Colors.grey),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            "Present",
+                            style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2), // Optional
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    10.verticalSpace,
+                    Text(
+                      "Senior Mobile App Developer, Reactree Pvt. Ltd",
+                      style: GoogleFonts.inter(fontSize: 12, color: Colors.cyan),
+                    ),
+                    10.verticalSpace,
+                    Text(
+                      "pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development,",
+                      style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 2),
+                    ),
+                    10.verticalSpace,
+                  ],
+                )
+              ],
+            ),
+          ),
+          30.verticalSpace,
           Text("PROJECTS", style: GoogleFonts.inter(letterSpacing: 2, fontSize: 15)),
           20.verticalSpace,
           projectCardMobile(
@@ -486,6 +667,21 @@ Widget mobileLayout(BuildContext context) {
           projectCardMobile("assets/images/agent.png", "Mozaic Agent App", "Mozaic Agent App", context),
           20.verticalSpace,
           projectCardMobile("assets/images/lookna.png", "Lookna", "Lookna", context),
+          30.verticalSpace,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/projects');
+                },
+                child: Text(
+                  "View Full Projects",
+                  style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 1.5),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     ),

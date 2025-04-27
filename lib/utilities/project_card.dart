@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/utilities/extensions.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:flutter/material.dart';
@@ -96,98 +97,86 @@ Widget projectCardWeb(String image, String title, String desc, BuildContext cont
   );
 }
 
-
 Widget projectCardMobile(String image, String title, String desc, BuildContext context) {
   return Container(
     decoration: BoxDecoration(
       color: const Color.fromARGB(255, 11, 22, 45),
-      borderRadius: BorderRadius.circular(12),
-      border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
     ),
-    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-    child: Row(
+    padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 15),
+    child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // LEFT SIDE — IMAGE
-        Expanded(
-          flex: 2,
-          child: GestureDetector(
-            onTap: () {
-              showDialog(
-                context: context,
-                builder: (_) => Dialog(
-                  backgroundColor: Colors.transparent,
-                  insetPadding: const EdgeInsets.all(20),
-                  child: Stack(
-                    children: [
-                      // Zoomable image
-                      InteractiveViewer(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12),
-                          child: Image.asset(
-                            image,
-                            fit: BoxFit.contain,
-                          ),
+        // RIGHT SIDE — TEXT
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: GoogleFonts.inter(fontSize: 12, color: Colors.cyan),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              desc,
+              style: GoogleFonts.inter(fontSize: 11, color: Colors.grey, letterSpacing: 1.5),
+            ),
+          ],
+        ),
+        20.verticalSpace,
+        GestureDetector(
+          onTap: () {
+            showDialog(
+              context: context,
+              builder: (_) => Dialog(
+                backgroundColor: Colors.transparent,
+                insetPadding: const EdgeInsets.all(20),
+                child: Stack(
+                  children: [
+                    // Zoomable image
+                    InteractiveViewer(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Image.asset(
+                          image,
+                          fit: BoxFit.contain,
                         ),
                       ),
+                    ),
 
-                      // Close button
-                      Positioned(
-                        top: 10,
-                        right: 10,
-                        child: GestureDetector(
-                          onTap: () => Navigator.of(context).pop(),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: Colors.white, width: 2),
-                              color: Colors.black.withOpacity(0.5),
-                            ),
-                            padding: const EdgeInsets.all(6),
-                            child: const Icon(
-                              Icons.close,
-                              color: Colors.white,
-                              size: 20,
-                            ),
+                    // Close button
+                    Positioned(
+                      top: 10,
+                      right: 10,
+                      child: GestureDetector(
+                        onTap: () => Navigator.of(context).pop(),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.white, width: 2),
+                            color: Colors.black.withOpacity(0.5),
+                          ),
+                          padding: const EdgeInsets.all(6),
+                          child: const Icon(
+                            Icons.close,
+                            color: Colors.white,
+                            size: 20,
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              );
-            },
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.2,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.asset(
-                  image,
-                  fit: BoxFit.fill,
-                ),
+              ),
+            );
+          },
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height * 0.2,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                image,
+                fit: BoxFit.fill,
               ),
             ),
-          ),
-        ),
-
-        const SizedBox(width: 20),
-
-        // RIGHT SIDE — TEXT
-        Expanded(
-          flex: 3,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: GoogleFonts.inter(fontSize: 12, color: Colors.cyan),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                desc,
-                style: GoogleFonts.inter(fontSize: 11, color: Colors.white),
-              ),
-            ],
           ),
         ),
       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter_web/utilities/extensions.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -80,14 +81,45 @@ Widget projectCardWeb(String image, String title, String desc, BuildContext cont
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                title,
-                style: GoogleFonts.inter(fontSize: 14, color: Colors.cyan),
+              Row(
+                children: [
+                  Text(
+                    title,
+                    style: GoogleFonts.inter(fontSize: 14, color: Colors.cyan),
+                  ),
+                ],
               ),
               const SizedBox(height: 10),
               Text(
                 desc,
                 style: GoogleFonts.inter(fontSize: 13, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "Live Demo",
+                    style: GoogleFonts.inter(fontSize: 12, color: Colors.grey),
+                  ),
+                  30.horizontalSpace,
+                  GestureDetector(
+                    onTap: () {},
+                    child: SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset("assets/images/play.svg"),
+                    ),
+                  ),
+                  5.horizontalSpace,
+                  GestureDetector(
+                    onTap: () {},
+                    child: SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset("assets/images/app.svg"),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -110,9 +142,41 @@ Widget projectCardMobile(String image, String title, String desc, BuildContext c
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: GoogleFonts.inter(fontSize: 12, color: Colors.cyan),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: GoogleFonts.inter(fontSize: 12, color: Colors.cyan),
+                ),
+                Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "Live Demo",
+                    style: GoogleFonts.inter(fontSize: 12, color: Colors.grey),
+                  ),
+                  30.horizontalSpace,
+                  GestureDetector(
+                    onTap: () {},
+                    child: SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset("assets/images/play.svg"),
+                    ),
+                  ),
+                  5.horizontalSpace,
+                  GestureDetector(
+                    onTap: () {},
+                    child: SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: SvgPicture.asset("assets/images/app.svg"),
+                    ),
+                  ),
+                ],
+              ),
+              ],
             ),
             const SizedBox(height: 10),
             Text(

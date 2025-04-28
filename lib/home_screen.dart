@@ -29,6 +29,70 @@ class _HomeScreenState extends State<HomeScreen> {
 
 Widget desktopLayout(BuildContext context) {
   final tools = ["flutter", "android", "ios"];
+  final List<String> skills = [
+    'Flutter',
+    'dart',
+    'Android',
+    'iOS',
+    'kotlin',
+    'firebase',
+    'Apple sdks',
+    'Google Sdks',
+    'Serverpod',
+    'Test-driven Development (TDD)',
+    'Unit Testing',
+    'Extreme Programming (XP)',
+    'Feature Flagging',
+    'Layered Architecture',
+    'Modular Architecture',
+    'Bloc',
+    'Micro Frontends',
+    'Software Design Patterns',
+    'MVC',
+    'MVVM',
+    'MVVM-C',
+    'MVP',
+    'Singleton',
+    'Reactive Programming',
+    'Networking',
+    'REST APIs',
+    'Payment Gateways',
+    'Stripe',
+    'GraphQL',
+    'Databases',
+    'Mongo DB',
+    'PhpMyAdmin',
+    'cPanel',
+    'Hive DB',
+    'SQFlite',
+    'Git',
+    'GitHub',
+    'BitBucket',
+    'UI/UX',
+    'Figma',
+    'Sketch',
+    'Bitrise',
+    'Fastlane',
+    'Continuous Integration & Deployment (CI/CD)',
+    'GitHub Actions & Workflows',
+    'Dependency Injection',
+    'Postman',
+    'Thunderbolt',
+    'Project Management',
+    'JIRA',
+    'Asaana',
+    'Click Up',
+    'Manual Deployements',
+    'App Store Publishing',
+    'Play Store Publishing',
+    "App Store / Play Store Rejections",
+    'Xcode',
+    'Android Studio',
+    'VS Code',
+    'IntelliJ IDEA',
+    'DartPad',
+    'FlutterFlow',
+  ];
 
   return Row(
     children: [
@@ -52,6 +116,7 @@ Widget desktopLayout(BuildContext context) {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               RichText(
+                textAlign: TextAlign.justify,
                 text: TextSpan(
                   style: GoogleFonts.poppins(
                     fontSize: 13,
@@ -327,17 +392,17 @@ Widget desktopLayout(BuildContext context) {
                   "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
                   context),
               40.verticalSpace,
-              projectCardWeb("assets/images/jtc.png", "JTC Fundraiser", "JTC Fundraiser", context),
+              projectCardWeb("assets/images/jtc.png", "JTC Fundraiser", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/pinch.png", "Pinch.om", "Pinch", context),
+              projectCardWeb("assets/images/pinch.png", "Pinch.om", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/ucr.png", "Ucrypted", "Ucrypted", context),
+              projectCardWeb("assets/images/ucr.png", "Ucrypted", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/user.png", "Mozaic User App", "Mozaic User App", context),
+              projectCardWeb("assets/images/user.png", "Mozaic User App", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/agent.png", "Mozaic Agent App", "Mozaic Agent App", context),
+              projectCardWeb("assets/images/agent.png", "Mozaic Agent App", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
               40.verticalSpace,
-              projectCardWeb("assets/images/lookna.png", "Lookna", "Lookna", context),
+              projectCardWeb("assets/images/lookna.png", "Lookna", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
 
               60.verticalSpace,
               Row(
@@ -350,6 +415,35 @@ Widget desktopLayout(BuildContext context) {
                   ),
                 ],
               ),
+              60.verticalSpace,
+
+              SectionTitle("Technical Skills"),
+              30.verticalSpace,
+              SingleChildScrollView(
+                child: Wrap(
+                  spacing: 8, // Small space horizontally
+                  runSpacing: 8, // Small space vertically
+                  children: skills
+                      .map((skill) => Chip(
+                            labelPadding: const EdgeInsets.symmetric(horizontal: 8),
+                            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            padding: EdgeInsets.zero,
+                            label: Text(
+                              skill,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 12, // Smaller text
+                                color: Colors.white,
+                              ),
+                            ),
+                            backgroundColor: Colors.teal[600],
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ))
+                      .toList(),
+                ),
+              ),
             ],
           ),
         ),
@@ -360,6 +454,70 @@ Widget desktopLayout(BuildContext context) {
 
 Widget mobileLayout(BuildContext context) {
   // final tools = ["flutter", "android", "ios"];
+  final List<String> skills = [
+    'Flutter',
+    'dart',
+    'Android',
+    'iOS',
+    'kotlin',
+    'firebase',
+    'Apple sdks',
+    'Google Sdks',
+    'Serverpod',
+    'Test-driven Development (TDD)',
+    'Unit Testing',
+    'Extreme Programming (XP)',
+    'Feature Flagging',
+    'Layered Architecture',
+    'Modular Architecture',
+    'Bloc',
+    'Micro Frontends',
+    'Software Design Patterns',
+    'MVC',
+    'MVVM',
+    'MVVM-C',
+    'MVP',
+    'Singleton',
+    'Reactive Programming',
+    'Networking',
+    'REST APIs',
+    'Payment Gateways',
+    'Stripe'
+        'GraphQL',
+    'Databases',
+    'Mongo DB',
+    'PhpMyAdmin',
+    'cPanel',
+    'Hive DB',
+    'SQFlite',
+    'Git',
+    'GitHub',
+    'BitBucket',
+    'UI/UX',
+    'Figma',
+    'Sketch',
+    'Bitrise',
+    'Fastlane',
+    'Continuous Integration & Deployment (CI/CD)',
+    'GitHub Actions & Workflows',
+    'Dependency Injection',
+    'Postman',
+    'Thunderbolt',
+    'Project Management',
+    'JIRA',
+    'Asaana',
+    'Click Up',
+    'Manual Deployements',
+    'App Store Publishing',
+    'Play Store Publishing',
+    "App Store / Play Store Rejections",
+    'Xcode',
+    'Android Studio',
+    'VS Code',
+    'IntelliJ IDEA',
+    'DartPad',
+    'FlutterFlow',
+  ];
 
   return SingleChildScrollView(
     child: Padding(
@@ -420,6 +578,7 @@ Widget mobileLayout(BuildContext context) {
           Text("ABOUT", style: GoogleFonts.inter(letterSpacing: 2, fontSize: 15)),
           SizedBox(height: 8),
           RichText(
+            textAlign: TextAlign.justify,
             text: TextSpan(
               style: GoogleFonts.inter(
                 fontSize: 11,
@@ -682,6 +841,35 @@ Widget mobileLayout(BuildContext context) {
               ),
             ],
           ),
+          30.verticalSpace,
+          Text("Technical Skills", style: GoogleFonts.inter(letterSpacing: 2, fontSize: 15)),
+          30.verticalSpace,
+          SingleChildScrollView(
+            child: Wrap(
+              spacing: 8, // Small space horizontally
+              runSpacing: 8, // Small space vertically
+              children: skills
+                  .map((skill) => Chip(
+                        labelPadding: const EdgeInsets.symmetric(horizontal: 8),
+                        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        padding: EdgeInsets.zero,
+                        label: Text(
+                          skill,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 12, // Smaller text
+                            color: Colors.white,
+                          ),
+                        ),
+                        backgroundColor: Colors.teal[600],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ))
+                  .toList(),
+            ),
+          ),
+          30.verticalSpace,
         ],
       ),
     ),

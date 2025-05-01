@@ -875,3 +875,15 @@ Widget mobileLayout(BuildContext context) {
     ),
   );
 }
+
+//Added for DTO UI side rendering for later user
+Widget userInfo() {
+  return Row(
+    children: [
+      Expanded(child: Container()),
+      Expanded(child: Container()),
+      Expanded(child: Container()),
+      Expanded(child: Container()),
+    ],
+  );
+}

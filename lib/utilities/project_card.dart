@@ -9,7 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 Widget projectCardWeb(String image, String title, String desc, BuildContext context) {
   return Container(
     decoration: BoxDecoration(
-      color: const Color.fromARGB(255, 11, 22, 45),
+      // color: const Color.fromARGB(255, 11, 22, 45),
       borderRadius: BorderRadius.circular(12),
       border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
     ),
@@ -132,7 +132,7 @@ Widget projectCardWeb(String image, String title, String desc, BuildContext cont
 Widget projectCardMobile(String image, String title, String desc, BuildContext context) {
   return Container(
     decoration: BoxDecoration(
-      color: const Color.fromARGB(255, 11, 22, 45),
+      // color: const Color.fromARGB(255, 11, 22, 45),
     ),
     padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 15),
     child: Column(

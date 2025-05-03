@@ -159,7 +159,7 @@ Widget desktopLayout(BuildContext context) {
               20.verticalSpace,
               Container(
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 11, 22, 45),
+                  // color: const Color.fromARGB(255, 11, 22, 45),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
                 ),
@@ -234,7 +234,7 @@ Widget desktopLayout(BuildContext context) {
               30.verticalSpace,
               Container(
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 11, 22, 45),
+                  // color: const Color.fromARGB(255, 11, 22, 45),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
                 ),
@@ -309,7 +309,7 @@ Widget desktopLayout(BuildContext context) {
               30.verticalSpace,
               Container(
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 11, 22, 45),
+                  // color: const Color.fromARGB(255, 11, 22, 45),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
                 ),
@@ -620,7 +620,7 @@ Widget mobileLayout(BuildContext context) {
           20.verticalSpace,
           Container(
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 11, 22, 45),
+              // color: const Color.fromARGB(255, 11, 22, 45),
               // borderRadius: BorderRadius.circular(12),
               // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
             ),
@@ -683,7 +683,7 @@ Widget mobileLayout(BuildContext context) {
           20.verticalSpace,
           Container(
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 11, 22, 45),
+              // color: const Color.fromARGB(255, 11, 22, 45),
               // borderRadius: BorderRadius.circular(12),
               // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
             ),
@@ -746,7 +746,7 @@ Widget mobileLayout(BuildContext context) {
           20.verticalSpace,
           Container(
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 11, 22, 45),
+              // color: const Color.fromARGB(255, 11, 22, 45),
               // borderRadius: BorderRadius.circular(12),
               // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
             ),
@@ -873,17 +873,5 @@ Widget mobileLayout(BuildContext context) {
         ],
       ),
     ),
-  );
-}
-
-//Added for DTO UI side rendering for later user
-Widget userInfo() {
-  return Row(
-    children: [
-      Expanded(child: Container()),
-      Expanded(child: Container()),
-      Expanded(child: Container()),
-      Expanded(child: Container()),
-    ],
   );
 }

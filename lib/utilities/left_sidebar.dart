@@ -68,13 +68,3 @@ class LeftSidebar extends StatelessWidget {
   }
 }
 
-Widget userInfo() {
-  return Row(
-    children: [
-      Expanded(child: Container()),
-      Expanded(child: Container()),
-      Expanded(child: Container()),
-      Expanded(child: Container()),
-    ],
-  );
-}

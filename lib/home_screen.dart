@@ -421,8 +421,8 @@ Widget desktopLayout(BuildContext context) {
               30.verticalSpace,
               SingleChildScrollView(
                 child: Wrap(
-                  spacing: 8, // Small space horizontally
-                  runSpacing: 8, // Small space vertically
+                  spacing: 8, 
+                  runSpacing: 8, 
                   children: skills
                       .map((skill) => Chip(
                             labelPadding: const EdgeInsets.symmetric(horizontal: 8),
@@ -432,7 +432,7 @@ Widget desktopLayout(BuildContext context) {
                               skill,
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
-                                fontSize: 12, // Smaller text
+                                fontSize: 12, 
                                 color: Colors.white,
                               ),
                             ),

@@ -86,6 +86,8 @@ Widget desktopLayout(BuildContext context) {
     'App Store Publishing',
     'Play Store Publishing',
     "App Store / Play Store Rejections",
+    'Fastlane',
+    'Shorebird',
     'Xcode',
     'Android Studio',
     'VS Code',

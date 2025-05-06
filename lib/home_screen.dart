@@ -392,17 +392,41 @@ Widget desktopLayout(BuildContext context) {
                   "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
                   context),
               40.verticalSpace,
-              projectCardWeb("assets/images/jtc.png", "JTC Fundraiser", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+              projectCardWeb(
+                  "assets/images/jtc.png",
+                  "JTC Fundraiser",
+                  "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
+                  context),
               40.verticalSpace,
-              projectCardWeb("assets/images/pinch.png", "Pinch.om", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+              projectCardWeb(
+                  "assets/images/pinch.png",
+                  "Pinch.om",
+                  "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
+                  context),
               40.verticalSpace,
-              projectCardWeb("assets/images/ucr.png", "Ucrypted", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+              projectCardWeb(
+                  "assets/images/ucr.png",
+                  "Ucrypted",
+                  "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
+                  context),
               40.verticalSpace,
-              projectCardWeb("assets/images/user.png", "Mozaic User App", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+              projectCardWeb(
+                  "assets/images/user.png",
+                  "Mozaic User App",
+                  "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
+                  context),
               40.verticalSpace,
-              projectCardWeb("assets/images/agent.png", "Mozaic Agent App", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+              projectCardWeb(
+                  "assets/images/agent.png",
+                  "Mozaic Agent App",
+                  "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
+                  context),
               40.verticalSpace,
-              projectCardWeb("assets/images/lookna.png", "Lookna", "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.", context),
+              projectCardWeb(
+                  "assets/images/lookna.png",
+                  "Lookna",
+                  "Badgerr is an online gamified application in which end user can create challenges and admin can accept or reject these challenges and assign winners and allocate prizes and badges. Admin can also add tutorials and articles to share important news.",
+                  context),
 
               60.verticalSpace,
               Row(
@@ -421,8 +445,8 @@ Widget desktopLayout(BuildContext context) {
               30.verticalSpace,
               SingleChildScrollView(
                 child: Wrap(
-                  spacing: 8, 
-                  runSpacing: 8, 
+                  spacing: 8,
+                  runSpacing: 8,
                   children: skills
                       .map((skill) => Chip(
                             labelPadding: const EdgeInsets.symmetric(horizontal: 8),
@@ -432,7 +456,7 @@ Widget desktopLayout(BuildContext context) {
                               skill,
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
-                                fontSize: 12, 
+                                fontSize: 12,
                                 color: Colors.white,
                               ),
                             ),
@@ -482,8 +506,8 @@ Widget mobileLayout(BuildContext context) {
     'Networking',
     'REST APIs',
     'Payment Gateways',
-    'Stripe'
-        'GraphQL',
+    'Stripe',
+    'GraphQL',
     'Databases',
     'Mongo DB',
     'PhpMyAdmin',
@@ -513,6 +537,8 @@ Widget mobileLayout(BuildContext context) {
     "App Store / Play Store Rejections",
     'Xcode',
     'Android Studio',
+    'Fastlane',
+    'Shorebird',
     'VS Code',
     'IntelliJ IDEA',
     'DartPad',
@@ -620,10 +646,10 @@ Widget mobileLayout(BuildContext context) {
           20.verticalSpace,
           Container(
             decoration: BoxDecoration(
-              // color: const Color.fromARGB(255, 11, 22, 45),
-              // borderRadius: BorderRadius.circular(12),
-              // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
-            ),
+                // color: const Color.fromARGB(255, 11, 22, 45),
+                // borderRadius: BorderRadius.circular(12),
+                // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
+                ),
             padding: EdgeInsets.symmetric(horizontal: 0, vertical: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -683,10 +709,10 @@ Widget mobileLayout(BuildContext context) {
           20.verticalSpace,
           Container(
             decoration: BoxDecoration(
-              // color: const Color.fromARGB(255, 11, 22, 45),
-              // borderRadius: BorderRadius.circular(12),
-              // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
-            ),
+                // color: const Color.fromARGB(255, 11, 22, 45),
+                // borderRadius: BorderRadius.circular(12),
+                // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
+                ),
             padding: EdgeInsets.symmetric(horizontal: 0, vertical: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -746,10 +772,10 @@ Widget mobileLayout(BuildContext context) {
           20.verticalSpace,
           Container(
             decoration: BoxDecoration(
-              // color: const Color.fromARGB(255, 11, 22, 45),
-              // borderRadius: BorderRadius.circular(12),
-              // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
-            ),
+                // color: const Color.fromARGB(255, 11, 22, 45),
+                // borderRadius: BorderRadius.circular(12),
+                // border: Border.all(color: const Color.fromARGB(255, 56, 56, 56)),
+                ),
             padding: EdgeInsets.symmetric(horizontal: 0, vertical: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

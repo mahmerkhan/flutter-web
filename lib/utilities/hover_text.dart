@@ -20,7 +20,7 @@ class _HoverTextState extends State<HoverText> {
       onExit: (_) => setState(() => _isHovered = false),
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onTap: widget.onTap,
+        onTap: widget.onTap, 
         child: Text(
           widget.text,
           style: TextStyle(
